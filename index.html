@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+<script>
+jQuery(function($){
+  $("#mobileButton").click(function () {
+    $('#mobileMenu').toggleClass('show');
+  });
+});
+</script>
 
 <div style="background:#eee; display: block;">
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
@@ -25,7 +32,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: no-repeat center center fixed;
+  background-size: cover;
   }
 }
 .mobile-navigation {
@@ -80,14 +87,4 @@ body {
 */
 
 </style>
-
-<script>
-
-jQuery(function($){
-  $("#mobileButton").click(function () {
-    $('#mobileMenu').toggleClass('show');
-  });
-});
-
-</script>
 
