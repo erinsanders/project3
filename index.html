@@ -3,13 +3,7 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-jQuery(function($){
-  $("#mobileButton").click(function () {
-    $('#mobileMenu').toggleClass('show');
-  });
-});
-</script>
+
 </head>
 
 <div style="background:#eee; display: block;">
@@ -17,6 +11,7 @@ jQuery(function($){
 
 <a href="#" id="mobileButton" class="mobile-menu-button" onClick="return(false);">&#9776; MENU</a>
 
+<body>
 <div id="mobileMenu" class="mobile-navigation">
     <ul>
       <li><a href="#">Dinner, Lunch, Brunch</a></li>
@@ -35,7 +30,14 @@ jQuery(function($){
     	A stylish, rustic-chic and charming eatery, Comodo is about a personal love story with a region and its flavors but keeping it true to the environment where it is found. This food is what happens when you take a Colombian-Spanish-Mexican-Brazilian-American that has adapted to New York. The decor of the 45 seat restaurant will convey the feeling of dining at home.</p>
   </section>
 </main>
-
+<script>
+jQuery(function($){
+  $("#mobileButton").click(function () {
+    $('#mobileMenu').toggleClass('show');
+  });
+});
+</script>
+</body>
 
 <style>
 
