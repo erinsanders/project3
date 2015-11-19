@@ -1,121 +1,151 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
-<head>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-</head>
-<body>
-<div style="background:#eee; display: block;">
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
-
-<a href="#" id="mobileButton" class="mobile-menu-button" onClick="return(false);">&#9776; MENU</a>
-
-<div id="mobileMenu" class="mobile-navigation">
-    <ul>
-      <li><a href="#">Dinner, Lunch, Brunch</a></li>
-      <li><a href="#">Locations & Hours</a></li>
-      <li><a href="#">Reservations</a></li>
-      <li><a href="#">Story</a></li>
-    </ul>
-</div>
-</div>
+<nav> 
+  <ul class="noJSmenu">
+    <li class="noJSshow"><a href="#showMenu" class="showIcon" title="Show Menu">Menu</a>
+      <ul id="showMenu" class="showMenu">
+        <li><a href="/">Menu</a></li>
+        <li><a href="/">Hours & Location</a></li>
+        <li><a href="/">Reservations</a></li>
+        <li><a href="/">Story</a></li>
+        <li><a href="#" class="close">Menu Close</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 <main class="m" role="main">
   <section id="content">
     <h1>Our Story</h1>
 
     <p>New York with an accent. Latin American inspired. Local by heart.
-    	A stylish, rustic-chic and charming eatery, Comodo is about a personal love story with a region and its flavors but keeping it true to the environment where it is found. This food is what happens when you take a Colombian-Spanish-Mexican-Brazilian-American that has adapted to New York. The decor of the 45 seat restaurant will convey the feeling of dining at home.</p>
+      A stylish, rustic-chic and charming eatery, Comodo is about a personal love story with a region and its flavors but keeping it true to the environment where it is found. This food is what happens when you take a Colombian-Spanish-Mexican-Brazilian-American that has adapted to New York. The decor of the 45 seat restaurant will convey the feeling of dining at home.</p>
   </section>
 </main>
-<script>
-jQuery(function($){
-  $("#mobileButton").click(function () {
-    $('#mobileMenu').toggleClass('show');
-  });
-});
-</script>
-</body>
+
+</html>
 
 <style>
-
 body {
   font-family: 'Raleway', sans-serif;
   background: url("images/brussel.jpg");
-  height: 100%;
+   no-repeat center center fixed; 
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+/* some resets to help example*/
+p, nav ul, nav li {
+margin:0;padding:0;list-style-type:none;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+p {padding:10px 0 0 0;}
+
+h1  {
+  font-size: 12pt;
+}
+
+/* lets navigate */
+ul.noJSmenu {
+  position: relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:40px;
+  background:#000;
+}
+
+.noJSshow {
+  display: inline-block;
+  padding: 0;
+  height: 40px;
   width: 100%;
-  background-size: cover;
-  background-attachment: fixed;
+  position: absolute;
 }
 
-  /*no-repeat center center fixed; 
- 	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-  }*/
+.showIcon {
+  display: block;
+  padding: 0 0 0 40px;
+  height: 40px;
+  width: 140px;
+  color:#fff;
+  line-height:40px;
+  /* comment out text-indent to show text link */
+  text-indent: -999em;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPCAMAAADeWG8gAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE2QjAxNjRDOUNEOTExRTE4RTNFRkI1RDQ2MUYxOTQ3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE2QjAxNjREOUNEOTExRTE4RTNFRkI1RDQ2MUYxOTQ3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTZCMDE2NEE5Q0Q5MTFFMThFM0VGQjVENDYxRjE5NDciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTZCMDE2NEI5Q0Q5MTFFMThFM0VGQjVENDYxRjE5NDciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz42AEtnAAAABlBMVEX///////9VfPVsAAAAAnRSTlP/AOW3MEoAAAAWSURBVHjaYmAgFzBiACKFho6NAAEGAD07AG1pn932AAAAAElFTkSuQmCC) no-repeat 10px center;
+}
 
-  /*background-repeat: no-repeat;
-  max-width: 100%; */
-  
+ul.showMenu {
+  position: absolute; 
+  /* arbitrary figure as long as off screen */
+  left: -1200px;
+  top: 0;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
 
-.mobile-navigation {
-	display: img ref="images/comodo salad.jpg";
+.showMenu li {
+  background: rgba(0,0,0,0.0);
+  display: block;
+  height: 0;
+  -webkit-transition: all 0.95s ease-out;
+  -moz-transition: all 0.95s ease-out;
+  -o-transition: all 0.95s ease-out;
+  transition: all 0.95s ease-out;
 }
-.show {
-	display: block;
+
+ul.showMenu:target {
+  /* used to pull in menu when selected */
+  left: 0; 
 }
-.mobile-navigation ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+
+.showMenu:target li:first-child {
+  /* +1px on height of menu */
+  margin-top: 41px; 
 }
-.mobile-navigation ul li a {
-	display: block;
-	text-decoration: none;
-	border-top: 1px solid #555;
-	margin: 0;
+
+.showMenu:target li {
+  background: rgba(0,0,0,0.8);
+  float: left;
+  height: auto;
+  width: 100%;
+  /* this is just for decoration */
+  margin-bottom: 1px;
 }
-.mobile-navigation ul li a:hover {
-	color: #444;
-	border-top: 1px solid #ccc;
+
+.showMenu:target li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
 }
-.mobile-navigation ul li a {
-	color: #fff;
-	display: block;
-	padding: 17px 5px;
+
+.showMenu:target li a:hover {
+  padding: 10px 15px 10px 25px;
+  text-decoration: none;
+  background:rgba(0,0,0,1.0);
 }
-.mobile-navigation ul li {
-	background: #rgba(255, 255, 255, 0.6);
-}
-.mobile-navigation ul li:hover {
-	background: #eee; 
-}
-.mobile-menu-button {
-	/* change to display: none */
-	display: block;
-	color: #000;
-	text-decoration: none;
-	line-height: 200%;
-	text-align: center;
-	padding: 9px 0;
-}
-.mobile-menu-button:hover {
-	color: #444;
+
+a.close {
+  font-size: 95%;
+  font-style: italic;
 }
 
 .m {
-  background: #fff;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  font-size: 10pt;
   box-shadow: 0 0 .625em .08em rgba(0, 0, 0, .05);
-  padding: 1em 5.5% 2em;
+  margin-top: 250px;
+  padding: 1.75em 5.5% 2em;
 }
-
-/* add this to media query
-.mobile-menu-button {
-  display: block;
-}
-*/
 
 </style>
