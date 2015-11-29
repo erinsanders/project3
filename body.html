@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+<header>
+  <h1>Title</h1>
+</header>
+
+<div class="container clearfix">
+</div>
+  
+ <div class="contents">
+   <h2>contents</h2>
+  </div>
+    
+<div class="sidebar">
+  <h2>sidebar</h2>
+   </div>
+
+<div class="footer">
+  <h2>footer</h2>
+</div>
+
+</div>
+
+
+</html>
+
+<style>
+html, body, h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+* { box-sizing: border-box; }
+.clearfix { overflow: auto; }
+
+header {
+  background-color: orange;
+  height: 100px;
+}
+
+.container {
+  border: 10px solid grey;
+  max-width: 1024;
+  margin: 0 auto;
+  background-color: lightgrey;
+}
+
+.contents {
+  height: 400px;
+  background-color: lightgreen; 
+}
+
+.sidebar {
+  height: 200px;
+  background-color: lightblue; 
+}
+
+.footer {
+  clear: both;
+}
+
+@media screen and (min-width: 800px) {
+  .contents {
+    width: 70%;
+    float: left;
+}
+  .sidebar {
+    width: 30%;
+    float: left;
+  }
+}
+  
+
+</style>
