@@ -1,0 +1,80 @@
+<!DOCTYPE>
+<html>
+
+<nav>
+  <a href="#">Menu</a>
+  <a href="#">Reservations</a>
+  <a href="#">Hours & Locations</a>
+  <a href="#">Story</a>  
+</nav>
+
+<h1 class="logo"> </h1>
+
+</html>
+
+<style>
+body {
+  background: url("images/brussel.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed; 
+  margin: 0; 
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+.logo {
+  background: url("images/clogo.jpg");
+  float: left;
+  width: 259.92px;
+  height: 67.92px;
+  padding-left:7px;
+  padding-top:8px;
+  margin-left: 16px;
+  background: #555;
+}
+
+/* base styles - mobile first */
+nav {
+  background: rgba(0, 0, 0, .5);
+  min-height: 60px;
+}
+
+
+a {
+  text-align: center;
+  display: block;
+  text-decoration:none;
+  color: #fff;
+  padding: 20px 0;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  font-size: 1.3em;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+a:hover {
+  background-color: rgba(255,255,255,0.2)
+}
+
+/* tablet size */
+@media (min-width : 481px) {
+  a {
+     float: left;
+     width: 25%;
+     font-size: 1em;
+     border: none; /* override */
+   }
+}
+
+/* desktop size */
+@media (min-width : 1025px) {
+  a {
+     float: none; /* override */
+     width: auto; /* override */
+     margin-left: 40px;
+     display:inline-block; /* override */
+     font-size: 1em; /* override */
+   }
+}
+
+</style>
