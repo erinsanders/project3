@@ -14,90 +14,61 @@
   <a href="news.html">NEWS</a>  
 </nav>
 
-<body>
-  <main class="m" role="main">
-  <section id="content">
-  </body>
-
 <div class="restaurant">
   <img src="images/clogo2.png">
 </div>
 
-<div class="header">
-  <div class="columns large-12 text-center">
-            <h1>You may book your reservation<a  target="_blank" href="http://www.opentable.com/comodo-reservations-new-york?restref=8681">here!</a></h1>             
-             <p>We also gladly accept walk-ins.</p>
-                      </div>
-
-<div class="location">
-        <p>58 Macdougal Street (at King St.) | 646.580.3866<br>
-        Dinner Mon-Sat 6 to 11 PM | Brunch Sat to Sun 11 AM to 4 PM<br>
-        Please visit our brother restaurant, Colonia Verde! <p>
+<div class="section">
+  <div class="top-border left"></div>
+  <div class="top-border right"></div>
+  <h1>OPENTABLE</h1>
+  <p>You may book your reservation here. We also gladly accept walk-ins.</p>
+    <a href="http://www.opentable.com/comodo-reservations-new-york?restref=8681">RESERVE HERE</a>
 </div>
 
-
-</html>
-
 <style>
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
 body {
-  background: url("images/coffee.jpg");
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-attachment: fixed; 
-  margin: 0; 
-  font-family: sans-serif;
-  font-weight: 200;
+  font-family: "PT Sans";
+  background: url("images/wraps.jpg");
 }
 
-h1 {
-text-align: center;
-}
-
-h3 {
-
-}
-
-ul {
-    list-style: square;
-    margin: 0 0 18px 1.5em;
-}
-
-.m {
-  background-color: rgba(0, 0, 0, .5);
-  color: white;
-  font-size: 10pt;
-  box-shadow: 0 0 .125em .05em rgba(0, 0, 0, .05);
-  margin-top: 40px;
-  margin-left: 100px;
-  margin-right: 100px;
-  padding: 1.75em 5.5% 2em;
-}
-
-.logo {
-  background: url("images/clogo.jpg");
-  float: left;
-  width: 259.92px;
-  height: 67.92px;
-  padding-left:7px;
-  padding-top:8px;
-  margin-left: 16px;
-  background: #555;
-}
-
-.location {
+.section {
+  position: relative;
+  width: 900px;
+  max-width: 80%;
+  border: 2px solid #333;
+  border-top: none;
   text-align: center;
-  font-family: open sans, sans-serif;
-  color: white;
-  font-size: 9pt;
-  box-shadow: 0 0 .425em .05em rgba(0, 0, 0, .05);
-  margin-top: 100px;
-  padding: 1.75em 5.5% 2em;
+  margin: 60px auto;
 }
 
-.restaurant {
-  align: center;
+.section h1 {
+  position: relative;
+  margin-top: -14px;
+  display: inline-block;
+  letter-spacing: 4px;
 }
+
+.top-border{
+  position: absolute;
+  height: 2px;
+  width: 24%;
+  background-color: #333;
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  left: 0;
+}
+
 
 /* base styles - mobile first */
 nav {
@@ -142,4 +113,52 @@ a:hover {
    }
 }
 
+@media (max-width: 685px) {
+.top-border {	
+  width: 18%;
+	}
+}
+
+.section p {
+  width: 61%;
+  margin: 20px auto 40px auto;
+  line-height: 30px;
+}
+
+.section a {
+  outline: 0;
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 40px;
+  width: 440px;
+  max-width: 80%;
+  background-color: #333;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+
+.section a:hover {
+  background-color: #1D222D;
+}
+
+.section a:link, .section a:visited, .section a:link:hover, .section a:visited:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .top-border {	
+    display: none;
+  }
+  .section {
+  border-top: 2px solid #333;
+  }
+  .section h1 {
+    margin: 20px 6px;
+  }
+}
 </style>
